@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #070f35;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-container {
+  background-color: #1b244a;
+  width: 80%;
+  height: auto;
+  max-height: 96vh;
+  padding: 2rem; /* give inner spacing so children don't stick to edges */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border: 1px solid #9aabd8;
+  border-radius: 10px;
+
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto; /* allow height to grow with content */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 2rem;
+}
+.guest-container,
+.home-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center headings, score and buttons */
+  gap: 1rem;
+  padding: 1rem;
+}
+h1 {
+  color: #eeeeee;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 1.25rem;
+}
+.score-box {
+  background-color: #080001;
+  height: 11rem;
+  width: 20rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span {
+  font-family: "orbitron";
+  font-size: clamp(2rem, 8vw, 8rem); /* responsive sizing to avoid overflow */
+  color: #f94f6d;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* allow full row so buttons can center */
+}
+.btn-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* space between buttons */
+  margin: 0.625rem 0;
+}
+.btn-container button {
+  background-color: #1b244a;
+  color: #9aabd8;
+  font-family: "orbitron";
+  font-weight: bold;
+  font-size: 1.6875rem;
+  flex: 1 1 auto;
+  min-width: 3rem;
+  height: auto;
+  padding: 0.5rem;
+  border: 4px solid #9aabd8;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.reset-btn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-btn button {
+  background-color: #f94f6d;
+  color: #fff;
+  font-family: "orbitron";
+  font-weight: bold;
+  font-size: 1.6875rem;
+  width: auto;
+  min-width: 120px;
+  height: auto;
+  margin: auto;
+  padding: 0.75rem;
+  border: 0 solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments - non-destructive defaults for large screens retained above */
+@media (max-width: 900px) {
+  .bg-container {
+    width: 92%;
+    padding: 1.5rem;
+  }
+  .container {
+    padding: 1.25rem;
+  }
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
+  }
+  .score-box {
+    width: 18rem;
+    height: 10rem;
+  }
+  .btn-container button,
+  .reset-btn button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-container {
+    width: 96%;
+    padding: 1rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .guest-container,
+  .home-container {
+    width: 100%;
+    padding: 0.75rem;
+    align-items: stretch; /* let inner elements take full width to avoid overlap */
+  }
+  .score-box {
+    width: 100%;
+    max-width: 420px;
+    height: 9rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .btn-container {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-direction: row; /* keep buttons in a row but allow them to grow */
+  }
+  .btn-container button {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .reset-btn button {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+    align-items: flex-start; /* allow content to scroll from top on very small screens */
+  }
+  .bg-container {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .score-box {
+    height: 7.5rem;
+  }
+  span {
+    font-size: clamp(1.5rem, 12vw, 4.5rem);
+  }
+  .btn-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .btn-container button {
+    width: 48%;
+    font-size: 1rem;
+    padding: 0.45rem;
+  }
+  .reset-btn button {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
