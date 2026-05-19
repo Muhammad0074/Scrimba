@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #1f2937;
+  width: 600px;
+
+  padding: 50px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: #4adf86;
+}
+
+p {
+  color: #d5d4d8;
+  margin-bottom: 40px;
+}
+
+#generate-btn {
+  background-color: #10b981;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 12px 20px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  margin-bottom: 35px;
+}
+
+#generate-btn:hover {
+  opacity: 0.9;
+}
+
+.passwords {
+  border-top: 1px solid #2f3e53;
+
+  padding-top: 35px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.password-card {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password-box {
+  background-color: #273549;
+  color: #55f991;
+
+  min-height: 45px;
+
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  font-size: 14px;
+
+  word-break: break-all;
+}
+
+.copy-btn {
+  background-color: transparent;
+  color: #55f991;
+
+  border: 1px solid #55f991;
+  border-radius: 6px;
+
+  padding: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #55f991;
+  color: #1f2937;
+}
